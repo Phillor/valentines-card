@@ -1,0 +1,13 @@
+version: '3'
+
+tasks:
+  init:
+    desc: "Installiert alle notwendigen Abhängigkeiten"
+    cmds:
+      - npm install
+    silent: false
+  run:
+    desc: "Startet das Download Portal lokal"
+    cmds:
+      - npm run dev -- --open
+    silent: false
