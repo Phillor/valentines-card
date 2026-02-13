@@ -1,6 +1,6 @@
 <script lang="ts">
     import { fade } from "svelte/transition";
-    import { base } from "$app/paths";
+    import { asset } from "$app/paths";
 
     let visible = $state(true);
 
@@ -18,9 +18,9 @@
                 {/if}
             </div>
             {#if page == 0}
-                <img src="{base}/images/hedgehog.gif" alt="hedgehog"/>
+                <img src={asset('/images/hedgehog.gif')} alt="hedgehog"/>
             {:else if page == 1}
-                <img src="{base}/images/party.gif" alt="party"/>
+                <img src={asset('/images/party.gif')} alt="party"/>
             {/if}
             <div id="buttons">
                 {#if page == 0}
@@ -31,8 +31,7 @@
                 {/if}
             </div>
             {#if page == 1}
-                Kino? Zoomania 2? Dann wenn du Zeit hast?
-                <img src="{base}/images/zoomania.gif" alt="zoomania"/><br />
+                <img src={asset('/images/zoomania.gif')} alt="zoomania"/><br />
             {/if}
         </div>
     </div>
