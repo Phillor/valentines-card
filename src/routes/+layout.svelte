@@ -3,7 +3,7 @@
 
 	let { children } = $props();
     export const ssr = false;
-    export const prerender = true;
+    export const prerender = false;
 </script>
 
 <svelte:head>
