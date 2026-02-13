@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 
+const repo = 'valentines-card'; // <- GENAU dein Repo-Name
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -12,7 +14,10 @@ const config = {
 			fallback: '404.html',
 			precompress: false,
 			strict: true
-        })
+        }),
+        paths: {
+            base: process.env.NODE_ENV === 'production' ? `/${repo}` : ''
+        }
 	}
 };
 
